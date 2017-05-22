@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "$1" != "" ]; then
+	name_program="$1"
+else
+	read -p "Enter your program name: " name_program
+fi
+
+touch ./"$name_program"
+chmod 755 "$name_program"
+vim "$name_program"
